@@ -1,0 +1,61 @@
+Vectors and vector spaces
+
+We encounter numerous situations in which we use a set of numbers to represent a particular entity. For example, your weight and height to represent your BMI, temperature, wind speed, humidity as a measure of the weather condition, etc. When we want to do some computations on these data points to draw meaningful conclusions such as weather forecasting, it is more convenient for us to do mathematical operations if we represent them as a set of numbers called vector . In this article, I will briefly talk about vector and collection of vectors called vector spaces. Although in this article, we study the math concepts using simple vectors which might not have any real-life significance as it is, it can be applied to the kind of examples that I stated above once the main idea is understood.
+
+Vector
+Assuming that you know what a Cartesian coordinate system is, broadly speaking, a vector is a group of numbers that represents a point in the coordinate system. Each individual element in a vector is called a component of the vector and the total number of elements decide the dimensionality of a vector. For example, a point in a plane can be represented using a 2-dimensional (2-D) vector. An important characteristic of the vectors is that they are attributed with a particular direction. Hence, we represent them using an arrow drawn from the origin to the point. You may be thinking that there could be an infinite number of vectors in the same direction. You are right. That is why we associate another parameter called magnitude with a vector. You can consider it to be the length of the vector. Thus, all the points that lie on a line will have the same direction but different magnitude.
+
+
+Unit vectors
+By now we know that a vector has the magnitude and the direction. We also know that there can be an infinite number of vectors in any given direction and their magnitude differentiates them. To make our life even simpler, we could have just one small vector of length one in a given direction. Once we have that we can use just one single number (magnitude) to represent any vector in that direction. That special vector whose length is one (unity) is called as the unit vector. You just multiply this vector with different numbers (scalar) to get different vectors in the direction of that unit vector.
+
+
+Notice that we are only talking about vectors in 2-dimensions. The same concept applies to the vectors of any dimension. It is just that we cannot visualize them when their dimension is greater than 3.
+
+Linear independence and orthogonality
+Till now we have been talking about just one vector at a time. Now we will raise the bar and dive into more than one. I will now introduce two important properties of a set of vectors. Again, to keep things simple, we will consider only two vectors.
+
+Linear independence
+When you are given with two vectors, if you can express the first vector in terms of the second by scaling the second vector, then we say that the first vector linearly depends on the second vector. You may infer the same in the other way as well — the second depends on the first. In summary, this set of two vectors is said to be linearly dependent. You already know that you can derive many different vectors by multiplying a single vector with a constant. All such vectors are linearly dependent. In other words, if the vectors lie along the same line (direction) in the plane, then they are linearly dependent.
+
+Thus, and are linearly dependent.
+
+If they do not lie along the same line (in the case of 2-dimensional vectors), then we say that they are linearly independent.
+
+
+Orthogonality
+In the case of 2-dimensional vectors, if two vectors are perpendicular to each other, we call them orthogonal. That means, one vector is 90 degrees apart from the other. They can be of any magnitude/length. We only care about their direction here. In mathematical terms, we say that if the projection of one vector onto the other is of zero length then they are orthogonal. To understand what a projection of a vector is, we will consider a simple example in 2-D.
+
+Consider two vectors and as shown below. Now let us imagine holding a torchlight at the tip of such that the direction of the light is perpendicular to. Now you can see the shadow of on. We call this to be the projection of on vector.
+
+Now, what happens if and are perpendicular? There won’t be any shadow! This, in turn, means the projection has zero magnitude and we say that the two vectors are orthogonal.
+
+In general, we compute the projection using an operation called dot product or scalar product which I will not talk about in this post.
+
+
+Vector spaces
+A vector space is a set of vectors on which certain operations and properties are defined. We will not go through all those operations and properties here. The only thing you need to know for now is that you can add vectors (component-wise) and multiply them with a scalar constant. You can consider a plane, that you are already familiar with, to be a vector space and we will stick with 2-dimension further down the line.
+
+As we just learned that we can add two or more vectors to get another vector, you might be thinking that we can get any vector on the plane by adding and scaling (multiplying) any two vectors. You are right, but not 100%. For that to be true, we need to impose one more constraint here. That constraint is for those two vectors to be linearly independent. Suppose, if you randomly choose any two vectors and if they happen to be on the same line, in that case, you cannot get every vector on the plane by linearly combining those two vectors. In reality, you can get any vector on that line by scaling those chosen vectors and nothing apart from that. You can see this in the below figure.
+
+With that understanding, we can learn two more concepts about the vector spaces, namely span, and basis of a vector space, before concluding this article.
+
+Span and basis
+If a set of vectors can be linearly combined to get any vector in a vector space, then we say that those set of vectors span that vector space. The term linear combination means that you can scale and add vectors as below.
+
+
+where v1, v2 are 2-D vectors and c1, c2 are scalars.
+
+If v1 and v2 are such that you can reach any point in the X-Y, then we say that v1 and v2 span the 2-D space. Now look at below figure containing two vectors and imagine any point that is not present on the line as shown in the plot on the right. Our target is to reach that point by combining these two vectors. Can we achieve our target? Definitely not. Because these two vectors are linearly dependent as you can see. v2=1.5∗v1 in this case. We can only reach those points that lie on the line.
+
+Now consider the case where two vectors are not along the same line. Here two vectors are linearly independent and hence we can get to any vector in the 2-D vector space by linearly combining them. We show few target vectors that we get by combining these two vectors (left side plot in the below fig, target vectors shown in blue).
+
+
+If a set of vectors are linearly independent and span the -dimensional vector space, then this set of vectors are called basis vectors of that -dimensional vector space. You can consider them as the basic building blocks using which you can construct any other vector in that space. If every vector in this set (basis) is orthogonal to every other vector, then we call them as orthogonal basis. On top of that, if all of them happen to be unit vectors, then we term them as orthonormal basis vectors.
+
+Now, can you think of the orthonormal basis for 2-D space — plane? In fact, X and Y axis themselves are the orthonormal basis.
+
+
+Now you may be thinking that a vector space can have many such basis vectors. You are right. In fact, any space has an infinite number of basis vectors. But why X and Y axis are widely used? The primary reason is, when the basis is orthonormal, each component of any vector is just orthogonal projection of that vector onto the corresponding basis vector. That is, the first component of a 2-D vector is orthogonal projection of that vector onto and the second component is simply the orthogonal projection onto Y-axis.
+
+That's all we need to know as of now to proceed to the next article! Hope you enjoyed learning about vectors and vector spaces.
